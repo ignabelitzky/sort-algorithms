@@ -1,6 +1,8 @@
 #include <iostream>
 #include "sort.h"
 
+#define SIZE 100
+
 void print_array(int a[], unsigned int size) {
     for(unsigned int i = 0; i < size; ++i) {
         if(i % 10 == 0) {
@@ -11,10 +13,10 @@ void print_array(int a[], unsigned int size) {
     std::cout << std::endl;
 }
 
-int main(int argc, char **argv) {
+int main() {
     unsigned int size = 100;
     unsigned int limit = 1000;
-    int data[size] = {0};
+    int data[SIZE] = {0};
     for(unsigned int i = 0; i < size; ++i) {
         data[i] = generate_random_number(limit);
     }
