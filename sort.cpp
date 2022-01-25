@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 #include "sort.h"
 
 static void swap(int a[], unsigned int b, unsigned int c) {
@@ -42,5 +41,19 @@ void selection_sort(int a[], unsigned int size) {
         minp = min_pos_from(a, size, i);
         swap(a, i, minp);
         ++i;
+    }
+}
+
+static void insert(int a[], unsigned int i) {
+    unsigned int j = i;
+    while(j > 0 && a[j] < a[j-1]) {
+        swap(a, j-1, j);
+        --j;
+    }
+}
+
+void insertion_sort(int a[], unsigned int size) {
+    for(unsigned int i = 1; i < size; ++i) {
+        insert(a, i);
     }
 }

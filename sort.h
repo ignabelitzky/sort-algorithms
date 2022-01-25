@@ -9,4 +9,6 @@ int generate_random_number(unsigned int to);
 
 void selection_sort(int a[], unsigned int size);
 
+void insertion_sort(int a[], unsigned int size);
+
 #endif
