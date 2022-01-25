@@ -11,4 +11,6 @@ void selection_sort(int a[], unsigned int size);
 
 void insertion_sort(int a[], unsigned int size);
 
+void merge_sort(int a[], unsigned int size);
+
 #endif

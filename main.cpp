@@ -1,11 +1,11 @@
 #include <iostream>
 #include "sort.h"
 
-#define SIZE 500
+#define SIZE 20
 
 void print_array(int a[], unsigned int size) {
     for(unsigned int i = 0; i < size; ++i) {
-        if(i % 50 == 0) {
+        if(i % 10 == 0) {
             std::cout << std::endl;
         }
         std::cout << a[i] << " ";
@@ -20,8 +20,8 @@ void generate_random_array(int a[], unsigned int size, unsigned int limit) {
 }
 
 int main() {
-    unsigned int size = 500;
-    unsigned int limit = 1000;
+    unsigned int size = 20;
+    unsigned int limit = 100;
     int data[SIZE] = {0};
 
     generate_random_array(data, size, limit);
@@ -42,7 +42,7 @@ int main() {
 
     generate_random_array(data, size, limit);
 
-    std::cout << "\n Printing unsorted array..." << std::endl;
+    std::cout << "\nPrinting unsorted array..." << std::endl;
     print_array(data, size);
 
     beginTime = std::chrono::high_resolution_clock::now();
@@ -55,6 +55,6 @@ int main() {
         << " nanoseconds." << std::endl;
     print_array(data, size);
     std::cout << std::endl;
-    
+
     return 0;
 }

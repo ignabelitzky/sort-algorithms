@@ -1,4 +1,3 @@
-#include <iostream>
 #include "sort.h"
 
 static void swap(int a[], unsigned int b, unsigned int c) {
@@ -8,8 +7,8 @@ static void swap(int a[], unsigned int b, unsigned int c) {
 }
 
 static unsigned int min_pos_from(int a[], unsigned int size, unsigned int i) {
-    unsigned int j = i + 1;
-    int minp = i;
+    unsigned int j = i + 1u;
+    unsigned int minp = i;
     while(j < size) {
         if(a[j] < a[minp]) {
             minp = j;
@@ -36,7 +35,7 @@ int generate_random_number(unsigned int to) {
 }
 
 void selection_sort(int a[], unsigned int size) {
-    unsigned int i = 0, minp = 0;
+    unsigned int i = 0u, minp = 0u;
     while(i < size) {
         minp = min_pos_from(a, size, i);
         swap(a, i, minp);
@@ -53,7 +52,7 @@ static void insert(int a[], unsigned int i) {
 }
 
 void insertion_sort(int a[], unsigned int size) {
-    for(unsigned int i = 1; i < size; ++i) {
+    for(unsigned int i = 1u; i < size; ++i) {
         insert(a, i);
     }
 }
