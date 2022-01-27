@@ -1,14 +1,12 @@
 CC = g++
-CFLAGS = -Wall -Werror -Wextra -pedantic
-OBJS = main.o sort.o
+CFLAGS = -Wall -Werror -Wextra -pedantic -std=c++20
+OBJS = main.o
 
-main: main.o sort.o
-	$(CC) $(CFLAGS) -o program main.o sort.o
+main: main.o
+	$(CC) $(CFLAGS) -o program main.o
 
-main.o: main.cpp sort.h
+main.o: main.cpp
 	$(CC) $(CFLAGS) -c main.cpp
-
-sort.o: sort.h
 
 clean:
 	rm program $(OBJS)
